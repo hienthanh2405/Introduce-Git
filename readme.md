@@ -57,20 +57,20 @@ tiếp. Mức độ riêu đề giảm dần từ 1 đến 6
 
 Ví dụ:
 
-`#1.Tiêu đề cấp 1`
-
 #1.Tiêu đề cấp 1
 
-`##2.Tiêu đề cấp 2`
+# 1.Tiêu đề cấp 1
 
 ##2.Tiêu đề cấp 2
 
+## 2.Tiêu đề cấp 2
 
-`######6.Tiêu đề cấp 6`
 
 ######6.Tiêu đề cấp 6
 
-##2. Chèn link, chèn ảnh
+###### 6.Tiêu đề cấp 6
+
+## 4.2. Chèn link, chèn ảnh
 
 - Để chèn hyperlink bạn chỉ cần paste luôn linh đó vào file .md
 
@@ -88,7 +88,7 @@ Kết quả là:
 
 - Để chèn ảnh thì bạn hãy sử dụng cú pháp sau:
 
-`![tieu_de](link_hinh)`
+![tieu_de](link_hinh)
 
 up hình lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
