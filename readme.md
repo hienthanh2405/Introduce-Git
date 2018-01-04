@@ -1,5 +1,10 @@
 1 Sơ đồ tổng quan về hệ thống git
 
+	<img src="https://i2.wp.com/hocarm.org/wp-content/uploads/2017/02/VersionControl-Server.png?w=700&ssl=1">
+	Git thì nó sẽ giúp ta lưu lại các phiên bản mỗi khi có sự thay đổi mã nguồn, đo đó nếu có làm sai ở 
+	đâu đó trong phiên bản mới thì ta vẫn có thể dễ dàng khắc phục bằng cách khôi phục lại phiên bản cũ 
+	ổn định hơn.
+
 
 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
 
