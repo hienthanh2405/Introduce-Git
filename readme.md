@@ -11,7 +11,7 @@
 
 ## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
 
-	- Cách thông dụng nhất để copy một cái repo là sử dụng lệnh git clone:
+	- Cách thông dụng nhất để copy một cái repo là sử dụng lệnh **git clone**:
 		Git clone <link repository>
 	- Lệnh Git add có thể được dùng để thêm file vào index. Vi dụ:
 		Git add temp.txt
