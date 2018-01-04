@@ -39,7 +39,7 @@
 	- B2: Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp 
 		tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
 		
-##4. Thao tác với Repository
+## 4. Thao tác với Repository
 
 Tạo một repository mới trên trang github.com
 
@@ -47,7 +47,7 @@ Tạo một repository mới trên trang github.com
 
 Một số phương pháp tôi hay sử dụng để viết:
 
-##1. Thẻ tiêu đề
+## 4.1. Thẻ tiêu đề
 
 Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, có thể dùng từ 1 đến 6 ký tự # liên 
 
@@ -92,7 +92,7 @@ Kết quả là:
 
 up hình lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
-##3. Ký tự in đậm, in nghiêng
+## 4.3. Ký tự in đậm, in nghiêng
 
 - Để in đậm một đoạn text bạn chỉ cần làm như sau:
 
@@ -108,7 +108,7 @@ Kết quả là:
 
 *từ cần in nghiêng*
 
-##4. Trích dẫn, bo chữ
+## 4.4. Trích dẫn, bo chữ
 
 -  Để bo một đoạn text thì bạn chỉ cần sử dụng cú pháp sau:
 
@@ -116,25 +116,4 @@ Kết quả là:
 
 Kết quả là: `đoạn cần bo`
 
-##5. Gạch đầu dòng
-
-- Để sử dụng gạch đầu dòng bạn chỉ cần sử dụng cú pháp sau:
-
-- Gạch đầu dòng thứ nhất
-  <ul>
-  <li>Thụt với đầu dòng 1</li>
-  <li>Thụt với đầu dòng 1</li>
-  </ul>
-- Gạch đầu dòng thứ hai
-  <ul>
-  <li>Thụt với đầu dòng 2</li>
-  <li>Thụt với đầu dòng 2</li>
-  </ul>
-
-    Gạch đầu dòng thứ nhất
-        Thụt với đầu dòng 1
-        Thụt với đầu dòng 1
-    Gạch đầu dòng thứ hai
-        Thụt với đầu dòng 2
-        Thụt với đầu dòng 2
 
