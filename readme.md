@@ -1,4 +1,4 @@
-#Git-Basic
+# Git-Basic
 
 ## 1 Sơ đồ tổng quan về hệ thống git
 
