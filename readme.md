@@ -11,19 +11,19 @@
 
 ## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
 
-	Cách thông dụng nhất để copy một cái repo là sử dụng lệnh git clone:
+	- Cách thông dụng nhất để copy một cái repo là sử dụng lệnh git clone:
 		Git clone <link repository>
-	Lệnh Git add có thể được dùng để thêm file vào index. Vi dụ:
+	- Lệnh Git add có thể được dùng để thêm file vào index. Vi dụ:
 		Git add temp.txt
-	Còn bạn muốn lưu lại những thay đổi mỗi lần bạn sửa thì lênh git commit :
+	- Còn bạn muốn lưu lại những thay đổi mỗi lần bạn sửa thì lênh git commit :
 		Git commit  –m “Lời nhắn”
-	Sau khi commit bạn sẽ đẩy nó len repository với lệnh git push:
+	- Sau khi commit bạn sẽ đẩy nó len repository với lệnh git push:
 		Git push : nó sẽ đẩy lên nhanh ở mặc đinh
-	Nhưng bạn muốn đẩy lênh nhánh bạn muốn bạn dùng 
-	Git push origin master : đẩy lên nhánh master
-	Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh:
+	- Nhưng bạn muốn đẩy lênh nhánh bạn muốn bạn dùng 
+			Git push origin master : đẩy lên nhánh master
+	- Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh:
 		Git pull : đưa code về máy mình để xem có những thay đổi gì ko
-	Git remote :
+	- Git remote :
 	
 ## 3 Cách sử dụng .gitignore
 
@@ -35,6 +35,6 @@
 	a> Local gitignore : Chỉ có tác dụng trong 1 repository và nó buộc phải commit & push lên repository để share 
 	với các user khác
 	b> Global gitignore : Được share với tất cả các repository trong máy tính của bạn
-	Tạo file .gitignore : echo "" > .gitignore hoặc có thể down về từ trên mạng với những ngôn ngữ bạn cần.
-	Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp 
-	tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
+	- B1: Tạo file .gitignore : echo "" > .gitignore hoặc có thể down về từ trên mạng với những ngôn ngữ bạn cần.
+	- B2: Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp 
+		tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
