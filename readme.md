@@ -1,8 +1,8 @@
-##Git-Basic
+#Git-Basic
 
 ## 1 Sơ đồ tổng quan về hệ thống git
 
-	<img src="https://i2.wp.com/hocarm.org/wp-content/uploads/2017/02/VersionControl-Server.png?w=700&ssl=1">
+	<img src="https://www.google.com.vn/search?q=Git&tbm=isch&tbs=simg:CAQSkgEJuajuxyzjq4sahgELEKjU2AQaBAgVCAAMCxCwjKcIGl0KWwgDEiNhPesBQGLEA8kDRv4LswydPZ89nj26KJw9wj7zP8E-uyjFPRow6s9urNyMMbyhqp7_1kRdLUfQdhZsJnbIs1oCv4XV6MJWm7ujszq47BHSSX42cmQ2-IAQMCxCOrv4IGgoKCAgBEgRzvxy-DA&sa=X&ved=0ahUKEwix-tXlv77YAhUKP48KHdhjCYMQwg4IIigA&biw=1366&bih=675#imgrc=wSOGZ2gq2T33UM:">
 	
 	Git thì nó sẽ giúp ta lưu lại các phiên bản mỗi khi có sự thay đổi mã nguồn, đo đó nếu có làm sai ở 
 	đâu đó trong phiên bản mới thì ta vẫn có thể dễ dàng khắc phục bằng cách khôi phục lại phiên bản cũ 
