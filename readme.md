@@ -38,3 +38,103 @@
 	- B1: Tạo file .gitignore : echo "" > .gitignore hoặc có thể down về từ trên mạng với những ngôn ngữ bạn cần.
 	- B2: Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp 
 		tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
+		
+##4. Thao tác với Repository
+
+Tạo một repository mới trên trang github.com
+
+![Imgur](https://i.imgur.com/INNS2fv.png)
+
+Một số phương pháp tôi hay sử dụng để viết:
+
+##1. Thẻ tiêu đề
+
+Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, có thể dùng từ 1 đến 6 ký tự # liên 
+
+tiếp. Mức độ riêu đề giảm dần từ 1 đến 6
+
+- Tùy mục đích và ý thích bạn có thể sử dụng cách này để thể hiện các chỉ mục khác nhau.
+
+Ví dụ:
+
+`#1.Tiêu đề cấp 1`
+
+#1.Tiêu đề cấp 1
+
+`##2.Tiêu đề cấp 2`
+
+##2.Tiêu đề cấp 2
+
+
+`######6.Tiêu đề cấp 6`
+
+######6.Tiêu đề cấp 6
+
+##2. Chèn link, chèn ảnh
+
+- Để chèn hyperlink bạn chỉ cần paste luôn linh đó vào file .md
+
+https://github.com
+
+https://github.com
+
+Hoặc bạn cũng có thể sử dụng cú pháp sau để thu ngắn đường dẫn của link
+
+`[Github](https://github.com)`
+
+Kết quả là:
+
+[Github](https://github.com)
+
+- Để chèn ảnh thì bạn hãy sử dụng cú pháp sau:
+
+`![tieu_de](link_hinh)`
+
+up hình lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
+
+##3. Ký tự in đậm, in nghiêng
+
+- Để in đậm một đoạn text bạn chỉ cần làm như sau:
+
+`**từ cần in đậm**`
+
+Kết quả là:
+
+**từ cần in đậm**
+
+- Để in nghiên một đoạn text bạn chỉ cần làm như sau:
+
+`*từ cần in nghiêng*`
+
+*từ cần in nghiêng*
+
+##4. Trích dẫn, bo chữ
+
+-  Để bo một đoạn text thì bạn chỉ cần sử dụng cú pháp sau:
+
+`đoạn cần bo`
+
+Kết quả là: `đoạn cần bo`
+
+##5. Gạch đầu dòng
+
+- Để sử dụng gạch đầu dòng bạn chỉ cần sử dụng cú pháp sau:
+
+- Gạch đầu dòng thứ nhất
+  <ul>
+  <li>Thụt với đầu dòng 1</li>
+  <li>Thụt với đầu dòng 1</li>
+  </ul>
+- Gạch đầu dòng thứ hai
+  <ul>
+  <li>Thụt với đầu dòng 2</li>
+  <li>Thụt với đầu dòng 2</li>
+  </ul>
+
+    Gạch đầu dòng thứ nhất
+        Thụt với đầu dòng 1
+        Thụt với đầu dòng 1
+    Gạch đầu dòng thứ hai
+        Thụt với đầu dòng 2
+        Thụt với đầu dòng 2
+
