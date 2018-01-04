@@ -88,7 +88,7 @@ Kết quả là:
 
 - Để chèn ảnh thì bạn hãy sử dụng cú pháp sau:
 
-![tieu_de](link_hinh)
+'![tieu_de](link_hinh)'
 
 up hình lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
