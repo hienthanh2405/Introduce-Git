@@ -1,12 +1,15 @@
-1 Sơ đồ tổng quan về hệ thống git
+##Git-Basic
+
+## 1 Sơ đồ tổng quan về hệ thống git
 
 	<img src="https://i2.wp.com/hocarm.org/wp-content/uploads/2017/02/VersionControl-Server.png?w=700&ssl=1">
+	
 	Git thì nó sẽ giúp ta lưu lại các phiên bản mỗi khi có sự thay đổi mã nguồn, đo đó nếu có làm sai ở 
 	đâu đó trong phiên bản mới thì ta vẫn có thể dễ dàng khắc phục bằng cách khôi phục lại phiên bản cũ 
 	ổn định hơn.
 
 
-2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
+## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
 
 	Cách thông dụng nhất để copy một cái repo là sử dụng lệnh git clone:
 		Git clone <link repository>
@@ -22,7 +25,7 @@
 		Git pull : đưa code về máy mình để xem có những thay đổi gì ko
 	Git remote :
 	
-3 Cách sử dụng .gitignore
+## 3 Cách sử dụng .gitignore
 
 	Mục đích sử dụng gitignore: Khi phát triển một dự án phần mềm thì chắc chắn sẽ có rất nhiều file bạn không 
 	muốn đẩy lên repository, ví dụ như các file thư viện js,css (nếu đã dùng bower để quản lý) hay là những file 
