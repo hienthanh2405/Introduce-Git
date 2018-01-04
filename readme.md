@@ -120,8 +120,8 @@ Kết quả là: `đoạn cần bo`
 
 Tải về phần mềm SourceTree: https://www.sourcetreeapp.com/
 Giao diện chính sẽ có hình dạng:
-<img src="https://imgur.com/a/iMWrP">
+<img src="https://imgur.com/a/iMWrP" />
 - B1: Clone Repository trong SourceTree
-<img src="https://imgur.com/a/sHixQ">
+<img src="https://imgur.com/a/sHixQ" />
 - B2: Thực hiện cách thao tác add, commit, push, pull trên sourcetree
-<img src="https://imgur.com/a/M6x7v">
+<img src="https://imgur.com/a/M6x7v" />
