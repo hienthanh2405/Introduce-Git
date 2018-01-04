@@ -16,6 +16,9 @@
 	Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh:
 		Git pull : đưa code về máy mình để xem có những thay đổi gì ko
 	Git remote :
+	
+3 Cách sử dụng .gitignore
+
 	Mục đích sử dụng gitignore: Khi phát triển một dự án phần mềm thì chắc chắn sẽ có rất nhiều file bạn không 
 	muốn đẩy lên repository, ví dụ như các file thư viện js,css (nếu đã dùng bower để quản lý) hay là những file 
 	sau khi biên dịch chương trình…..blah blah. Chính vì điều này mà Git đã cung cấp cho chúng ta một kỹ thuật 
