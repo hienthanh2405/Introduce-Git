@@ -122,7 +122,7 @@ Tải về phần mềm SourceTree: https://www.sourcetreeapp.com/
 
 Giao diện chính sẽ có hình dạng:
 
- !(https://imgur.com/a/iMWrP)
+ !(https://i.imgur.com/3XVx2wI.png)
  
 - B1: Clone Repository trong SourceTree
 
