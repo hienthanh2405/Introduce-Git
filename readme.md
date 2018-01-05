@@ -126,8 +126,15 @@ Giao diện chính sẽ có hình dạng:
  
 - B1: Clone Repository trong SourceTree
 
- !(https://imgur.com/a/sHixQ)
+<img src="https://i.imgur.com/iwvgVOC.png " />  
  
 - B2: Thực hiện cách thao tác add, commit, push, pull trên sourcetree
 
- !(https://imgur.com/a/M6x7v)
+- Thao tác add, commit:
+<img src="https://i.imgur.com/AX5E3oj.jpg" />
+
+- Thao tác push:
+<img src="https://i.imgur.com/pg9jI8g.jpg" />
+
+- Thao tác pull:
+<img src="https://i.imgur.com/iRODbm7.jpg" />
