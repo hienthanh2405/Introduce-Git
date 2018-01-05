@@ -12,18 +12,18 @@ Git thì nó sẽ giúp ta lưu lại các phiên bản mỗi khi có sự thay 
 ## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
 
 - Cách thông dụng nhất để copy một cái repo là sử dụng lệnh **git clone**:
-		Git clone <link repository>
+		git clone <link repository>
 - Lệnh Git add có thể được dùng để thêm file vào index. Vi dụ:
-		Git add temp.txt
+		git add temp.txt
 - Còn bạn muốn lưu lại những thay đổi mỗi lần bạn sửa thì lênh git commit :
-		Git commit  –m “Lời nhắn”
+		git commit  –m “Lời nhắn”
 - Sau khi commit bạn sẽ đẩy nó len repository với lệnh git push:
-		Git push : nó sẽ đẩy lên nhanh ở mặc đinh
+		git push : nó sẽ đẩy lên nhanh ở mặc đinh
 - Nhưng bạn muốn đẩy lênh nhánh bạn muốn bạn dùng 
-			Git push origin master : đẩy lên nhánh master
+			git push origin master : đẩy lên nhánh master
 - Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh:
-		Git pull : đưa code về máy mình để xem có những thay đổi gì ko
-- Git remote :
+		git pull : đưa code về máy mình để xem có những thay đổi gì ko
+- git remote :
 	
 ## 3 Cách sử dụng .gitignore
 
@@ -138,3 +138,35 @@ Giao diện chính sẽ có hình dạng:
 
 - Thao tác pull:
 <img src="https://i.imgur.com/iRODbm7.jpg" />
+
+## 6 Cách phân nhánh hiệu quả trong Git 
+
+<h4>Branch trong Git là gì?</h4>
+Khi bắt đầu khởi tạo một repository hoặc clone một repository, bạn sẽ có một nhánh (branch) chính tên là master 
+(bạn có thể hiểu master là một cái thân cây). Đây là branch mà sẽ chứa toàn bộ các mã nguồn chính trong repository.
+
+Repo trung tâm sẽ chứa hai branches chính hoạt động mãi mãi:
+- master
+- develop
+Nhánh master tại origin là nhánh quen thuộc với tất cả các Git users. Song song là nhánh develop.
+
+Bên cạnh hai branches chính master và develop, mô hình mà tôi đang sử dụng còn có thêm rất nhiều những branches phụ để 
+giúp các team members có thể phát triển song song, dễ dàng tracking theo features, chuẩn bị cho release hoặc fix nhanh 
+các vấn đề production. Khác với hai branches chính kia, các branches phụ này chỉ tồn tại trong một khoảng thời gian ngắn, 
+rồi sẽ bị xoá đi.
+- Feature branches
+- Release branches
+- Hotfix branches
+
+Feature branches (hay còn gọi là topic branches) được sử dụng để phát triển các feature mới phục vụ cho release sau này.
+Khi bắt đầu phát triển một chức năng, có thể chưa rõ được thời điểm chức năng đó được tích hợp vào hệ thống và release. 
+Feature branch sẽ tồn tại trong quá trình chức năng được phát triển, cuối cùng sẽ được merge lại vào develop (khi quyết định 
+lần release tới bao gồm chức năng đó) hoặc bị bỏ đi (khi thấy chức năng không còn cần thiết).
+
+-  Để tạo một nhánh và chuyển sang nhánh đó đồng thời, bạn có thể chạy lệnh git checkout với tham số -b:
+	git checkout -b iss53
+	Switched to a new branch "iss53"
+
+
+
+
