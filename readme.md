@@ -135,7 +135,7 @@ Kết quả là:
 
 Kết quả là: `đoạn cần bo`
 
-##### 5 Cách Sử dụng Source Tree
+## 5 Cách Sử dụng Source Tree
 
 Tải về phần mềm SourceTree: https://www.sourcetreeapp.com/
 
