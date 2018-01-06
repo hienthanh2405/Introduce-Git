@@ -45,9 +45,11 @@ Tạo một repository mới trên trang github.com
 
 ![Imgur](https://i.imgur.com/INNS2fv.png)
 
-Một số phương pháp tôi hay sử dụng để viết:
 
-## 4.1. Thẻ tiêu đề
+
+###*Một số phương pháp tôi hay sử dụng để viết markdow:*
+
+##### 4.1. Thẻ tiêu đề
 
 Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, có thể dùng từ 1 đến 6 ký tự # liên 
 
@@ -70,7 +72,7 @@ Ví dụ:
 
 ###### 6.Tiêu đề cấp 6
 
-## 4.2. Chèn link, chèn ảnh
+##### 4.2. Chèn link, chèn ảnh
 
 - Để chèn hyperlink bạn chỉ cần paste luôn linh đó vào file .md
 
@@ -92,7 +94,7 @@ Kết quả là:
 
 up hình lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
-## 4.3. Ký tự in đậm, in nghiêng
+##### 4.3. Ký tự in đậm, in nghiêng
 
 - Để in đậm một đoạn text bạn chỉ cần làm như sau:
 
@@ -108,7 +110,7 @@ Kết quả là:
 
 *từ cần in nghiêng*
 
-## 4.4. Trích dẫn, bo chữ
+##### 4.4. Trích dẫn, bo chữ
 
 -  Để bo một đoạn text thì bạn chỉ cần sử dụng cú pháp sau:
 
@@ -116,7 +118,7 @@ Kết quả là:
 
 Kết quả là: `đoạn cần bo`
 
-## 5 Cách Sử dụng Source Tree
+##### 5 Cách Sử dụng Source Tree
 
 Tải về phần mềm SourceTree: https://www.sourcetreeapp.com/
 
@@ -167,6 +169,44 @@ lần release tới bao gồm chức năng đó) hoặc bị bỏ đi (khi thấ
 	git checkout -b iss53
 	Switched to a new branch "iss53"
 
+## 7 Giới thiệu về cách tạo team, tạo pull request và phân quyền
 
+#### Pull request
 
+Đề đảm bảo cho việc tương tác nhóm được tốt hơn, và hạn chế tối đa conflict có thể xảy ra, cũng như dễ dàng theo dấu dự án (để khôi phục trạng thái nếu lỡ có biến cố xảy ra), hay để cộng đồng nguồn mở có thể tham gia đóng góp cho dự án được thuận tiện và blah blah lợi ích khác, `pull request` ra đời.
+
+*Ví dụ chúng ta đã phát triển xong tính năng nào đó(nhánh tên bar)và muốn ghép nó vào với master, lúc này ta sẽ push code mình lên bar branch trên server, sau đó thực hiện yêu cầu được ghép code vào nhánh chính: yêu cầu này chính là `pull request`.*
+
+#### Thao tác:
+`$ git push gh nhanh_can_pull`
+
+Lệnh trên sẽ đẩy bar branch của mình lên server, đồng thời tạo branch mới trên đó nếu chưa có.
+
+#####Khác nhau giữa Pull và Pull Request trong Git?
+
+#####Git Pull
+
+Câu lệnh `git pull` thực ra là viết tắt của `git pull origin master`. Trong đó:
+
+`origin` là tên của kho chứa từ xa (hay remote repository).
+
+`master` là tên của nhánh trên kho chứa từ xa. Một kho chứa có thể có nhiều nhánh khác nhau.
+
+Về bản chất khi chạy câu lệnh git pull origin master thực sự là bạn đang sử dụng hai câu lệnh phía sau:
+
+> $ git fetch origin master
+
+và:
+
+> $ git merge origin master
+
+Câu lệnh `git fetch origin master` sẽ truy vấn thông tin của kho chứa từ xa trên máy chủ remote và sau đó kéo về máy local những thay đổi này. Tiếp đó câu lệnh trên sẽ thực hiện việc so sánh những thay đổi mới kéo về máy local và hiển thị thông tin.
+
+Câu lệnh `git merge orign master` sẽ gộp những thay đổi mới kéo về (dùng câu lệnh git fetch ở trên) từ máy chủ từ xa với nhánh hiện tại trên máy local.
+
+#####Pull Request
+
+Thông thường khi làm với Git mỗi lập trình viên sẽ tạo một branch mới khác với master để phát triển một tính năng mới. Giả sử nhánh mà lập trình viên tạo ra để phát triển tính năng có tên là `my_feature`. Trong trường hợp này sau khi đẩy commit trên nhánh này trên nhánh tương ứng `my_feature` ở kho chứa từ xa `origin `thì để các lập trình viên khác có thể kéo về được commit này thì quản trị viên trên máy chủ từ xa cần thực hiện việc gộp commit ở nhánh `my_feature` về nhánh `master`.
+
+Pull request là một yêu cầu gửi tới quản trị viên kho chứa từ xa gộp commit mới được tạo ra từ nhanh `my_feature` về nhánh `master` để các lập trình viên khác có thể pull về được.
 
