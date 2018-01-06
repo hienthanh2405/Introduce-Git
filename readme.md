@@ -2,52 +2,69 @@
 
 ## 1 Sơ đồ tổng quan về hệ thống git
 
-<img src="https://i2.wp.com/hocarm.org/wp-content/uploads/2017/02/VersionControl-Server.png?w=700&ssl=1" />
-	
-Git thì nó sẽ giúp ta lưu lại các phiên bản mỗi khi có sự thay đổi mã nguồn, đo đó nếu có làm sai ở 
-đâu đó trong phiên bản mới thì ta vẫn có thể dễ dàng khắc phục bằng cách khôi phục lại phiên bản cũ 
-ổn định hơn.
+![Imgur](https://i.imgur.com/QOtE7O4.png)
 
 
-## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote
+- **Remote repository**: Là repository để chia sẻ giữa nhiều người và bố trí trên server chuyên dụng.
+- **Local repository**: Là repository bố trí trên máy của bản thân mình, dành cho một người dùng sử dụng.
 
-- Cách thông dụng nhất để copy một cái repo là sử dụng lệnh **git clone**:
-		git clone <link repository>
-- Lệnh Git add có thể được dùng để thêm file vào index. Vi dụ:
-		git add temp.txt
-- Còn bạn muốn lưu lại những thay đổi mỗi lần bạn sửa thì lênh git commit :
-		git commit  –m “Lời nhắn”
-- Sau khi commit bạn sẽ đẩy nó len repository với lệnh git push:
-		git push : nó sẽ đẩy lên nhanh ở mặc đinh
-- Nhưng bạn muốn đẩy lênh nhánh bạn muốn bạn dùng 
-			git push origin master : đẩy lên nhánh master
-- Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh:
-		git pull : đưa code về máy mình để xem có những thay đổi gì ko
-- git remote :
+Do repository phân thành 2 loại là local và remote nên với những công việc bình thường thì có thể sử dụng local repository và thực hiện trên toàn bộ máy sẵn có. Khi muốn công khai nội dung công việc mà bản thân đã làm trên local repository, thì sẽ upload lên remote repository rồi công khai. Thêm nữa, thông qua remote repository cũng có thể lấy về nội dung công việc của người khác.
+
+**Ghi lại thay đổi vào repository: Working Tree và Index**
+
+Trên Git, những thư mục được đặt trong sự quản lý của Git mà mọi người đang thực hiện công việc trong thực tế được gọi là working tree.
+
+Và trên Git, giữa repository và working tree tồn tại một nơi gọi là index. Index là nơi để chuẩn bị cho việc commit lên repository.
+
+![Imgur](https://i.imgur.com/JCho4AW.png)
+
+Trên Git, khi đã thực hiện commit thì trạng thái sẽ không được ghi trực tiếp trong repository từ working tree, mà sẽ ghi trạng thái đã được thiết lập của index được xây dựng ở giữa đó. Vì thế, để ghi lại trạng thái của file bằng commit thì trước hết cần đăng ký file trong index.
+
+Với việc chèn index vào giữa như thế này, bạn có thể thực hiện commit không bao gồm những file không cần thiết trong working tree, hay có thể đăng ký chỉ một phần thay đổi của file trong index rồi commit.
+
+## 2 Cách lệnh cơ bản của git: clone, add, commit, push, pull, remote, merge, giải quyết conflict.
+
+- Cách thông dụng nhất để copy một cái repository là sử dụng lệnh `git clone`: git clone <link repository>
+- Lệnh `git add` có thể được dùng để thêm file vào index. Vi dụ: git add temp.txt
+- Còn bạn muốn lưu lại những thay đổi mỗi lần bạn sửa thì lênh `git commit` : git commit  –m “Lời nhắn”
+- Sau khi commit bạn sẽ đẩy nó lên repository với lệnh `git push`: git push 
+- Nhưng bạn muốn đẩy lên nhánh bạn muốn bạn dùng `git push origin master`: đẩy lên nhánh master
+- Khi có những thay đổi trên repository thì trước khi thao tác gì trên code bạn nên dùng lệnh: `git pull`: đưa code về máy mình để xem có những thay đổi gì ko
+- `git remote`: Để có thể chia sẻ local repository của mình, bạn cần trỏ nó vào một remote repository nào đó. Việc trỏ này có thể thay đổi, thêm hoặc xóa đi khi bạn muốn.
+- Merge branch sẽ được thực hiện bằng lệnh `git merge`: git merge <commit>
+- Giải quyết xung đột: trường hợp đã thay đổi ở nơi giống nhau trong file trên remote repository và local repository. Trường hợp này, vì nó không thể tự phán đoán được lấy thay đổi từ bên nào nên sẽ phát sinh lỗi. Những nơi phát sinh xung đột, Git sẽ chỉnh sửa nội dung file giống như sơ đồ bên dưới, nên cần phải chỉnh sửa bằng tay.
+
+![Imgur](https://i.imgur.com/r3o9Ubw.png)
+
+Sau khi chỉnh sửa tất cả chỗ xung đột, nếu như tiến hành commit thì commit đã tích hợp thay đổi sẽ được tạo ra.
+
+![Imgur](https://i.imgur.com/4tLgiOy.png)
 	
 ## 3 Cách sử dụng .gitignore
 
-Mục đích sử dụng gitignore: Khi phát triển một dự án phần mềm thì chắc chắn sẽ có rất nhiều file bạn không 
-muốn đẩy lên repository, ví dụ như các file thư viện js,css (nếu đã dùng bower để quản lý) hay là những file 
-sau khi biên dịch chương trình…..blah blah. Chính vì điều này mà Git đã cung cấp cho chúng ta một kỹ thuật 
-để khi commit thì Git sẽ tự động bỏ nó ra khỏi repository, đó chính là 1 tệp tin có tên là .gitignore.
+Mục đích sử dụng gitignore: Khi phát triển một dự án phần mềm thì chắc chắn sẽ có rất nhiều file bạn không muốn đẩy lên repository, ví dụ như các file thư viện js,css (nếu đã dùng bower để quản lý) hay là những file sau khi biên dịch chương trình…..blah blah. Chính vì điều này mà Git đã cung cấp cho chúng ta một kỹ thuật để khi commit thì Git sẽ tự động bỏ nó ra khỏi repository, đó chính là 1 tệp tin có tên là .gitignore.
 Có 2 loại gitignore cần chú ý:
-a> Local gitignore : Chỉ có tác dụng trong 1 repository và nó buộc phải commit & push lên repository để share 
+
+**a. Local gitignore**: Chỉ có tác dụng trong 1 repository và nó buộc phải commit & push lên repository để share 
 với các user khác
-b> Global gitignore : Được share với tất cả các repository trong máy tính của bạn
-- B1: Tạo file .gitignore : echo "" > .gitignore hoặc có thể down về từ trên mạng với những ngôn ngữ bạn cần.
-- B2: Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp 
-		tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
+
+**b. Global gitignore**: Được share với tất cả các repository trong máy tính của bạn
+
+- B1: Mở cmd trên windows lên
+- B2: Tạo file .gitignore bằng lệnh: `echo "" > .gitignore` hoặc có thể down về từ trên mạng với những ngôn ngữ bạn cần.
+- B3: Sau khi tạo file .gitignore xong thì bạn phải commit & push lên repository, từ nay về sau những thư mục, tệp tin mà bạn muốn ignore đã được loại bỏ hoàn toàn khỏi sự quản lý của Git.
 		
 ## 4. Thao tác với Repository
 
-Tạo một repository mới trên trang github.com
+![Imgur](https://i.imgur.com/wxWdHoA.png)
 
-![Imgur](https://i.imgur.com/INNS2fv.png)
+Có 2 cách tạo local repository:
+
+- Tạo repository hoàn toàn mới
+- Sao chép từ remote repository (clone)
 
 
-
-###*Một số phương pháp tôi hay sử dụng để viết markdow:*
+### *Một số phương pháp tôi hay sử dụng để viết markdow:*
 
 ##### 4.1. Thẻ tiêu đề
 
@@ -182,9 +199,9 @@ lần release tới bao gồm chức năng đó) hoặc bị bỏ đi (khi thấ
 
 Lệnh trên sẽ đẩy bar branch của mình lên server, đồng thời tạo branch mới trên đó nếu chưa có.
 
-#####Khác nhau giữa Pull và Pull Request trong Git?
+##### Khác nhau giữa Pull và Pull Request trong Git?
 
-#####Git Pull
+##### Git Pull
 
 Câu lệnh `git pull` thực ra là viết tắt của `git pull origin master`. Trong đó:
 
@@ -204,9 +221,9 @@ Câu lệnh `git fetch origin master` sẽ truy vấn thông tin của kho chứ
 
 Câu lệnh `git merge orign master` sẽ gộp những thay đổi mới kéo về (dùng câu lệnh git fetch ở trên) từ máy chủ từ xa với nhánh hiện tại trên máy local.
 
-#####Pull Request
+##### Pull Request
 
 Thông thường khi làm với Git mỗi lập trình viên sẽ tạo một branch mới khác với master để phát triển một tính năng mới. Giả sử nhánh mà lập trình viên tạo ra để phát triển tính năng có tên là `my_feature`. Trong trường hợp này sau khi đẩy commit trên nhánh này trên nhánh tương ứng `my_feature` ở kho chứa từ xa `origin `thì để các lập trình viên khác có thể kéo về được commit này thì quản trị viên trên máy chủ từ xa cần thực hiện việc gộp commit ở nhánh `my_feature` về nhánh `master`.
 
-Pull request là một yêu cầu gửi tới quản trị viên kho chứa từ xa gộp commit mới được tạo ra từ nhanh `my_feature` về nhánh `master` để các lập trình viên khác có thể pull về được.
+**Pull request** là một yêu cầu gửi tới quản trị viên kho chứa từ xa gộp commit mới được tạo ra từ nhanh `my_feature` về nhánh `master` để các lập trình viên khác có thể pull về được.
 
