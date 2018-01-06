@@ -135,7 +135,7 @@ Kết quả là:
 
 Kết quả là: `đoạn cần bo`
 
-## 5 Cách Sử dụng Source Tree
+##### 5 Cách Sử dụng Source Tree
 
 Tải về phần mềm SourceTree: https://www.sourcetreeapp.com/
 
@@ -226,4 +226,41 @@ Câu lệnh `git merge orign master` sẽ gộp những thay đổi mới kéo v
 Thông thường khi làm với Git mỗi lập trình viên sẽ tạo một branch mới khác với master để phát triển một tính năng mới. Giả sử nhánh mà lập trình viên tạo ra để phát triển tính năng có tên là `my_feature`. Trong trường hợp này sau khi đẩy commit trên nhánh này trên nhánh tương ứng `my_feature` ở kho chứa từ xa `origin `thì để các lập trình viên khác có thể kéo về được commit này thì quản trị viên trên máy chủ từ xa cần thực hiện việc gộp commit ở nhánh `my_feature` về nhánh `master`.
 
 **Pull request** là một yêu cầu gửi tới quản trị viên kho chứa từ xa gộp commit mới được tạo ra từ nhanh `my_feature` về nhánh `master` để các lập trình viên khác có thể pull về được.
+
+**Tạo team và phân quyền**
+
+Để tạo một nhóm cho nhiều người cùng làm việc ta làm như sau:
+
+Truy cập URL: https://github.com/settings/organizations, 
+
+- Chọn New Organizations
+- Đặt tên và email cho tổ chức
+
+![Imgur](https://i.imgur.com/xt8owBv.png)
+
+Tại mục `Choose the organization’s plan` chọn Open Source để miễn phí, nhưng lúc này các Repo trong tổ chức sẽ là public.
+
+Mời các thành viên cho tổ chức
+
+![Imgur](https://i.imgur.com/XPRVedO.png)
+
+Lúc này vào trang cá nhân của bạn sẽ thấy tại mục Organizations có tổ chức mới vừa tạo. Để cấu hình tổ chức này ta click thẳng vào nó.
+
+![Imgur](https://i.imgur.com/0yeynZG.png)
+
+Ở đây tôi sẽ tạo một team mới như hình sau:
+
+![Imgur](https://i.imgur.com/BUEok1Q.png)
+
+![Imgur](https://i.imgur.com/uS5bVnV.png)
+
+Với 3 mức: Read Access, Write Access, Admin Access Github cho phép chúng ta phân quyền tới các thành viên của nhóm.
+
+![Imgur](https://i.imgur.com/gWV75N1.png)
+
+Để mời một người dùng khác vào team, ta click vào team đó và search tên của người dùng cần tìm
+
+![Imgur](https://i.imgur.com/sM2opUb.png)
+
+Sau đó hệ thống sẽ yêu cầu bạn nhập password để xác thực, nếu thành công, một email xác nhận sẽ được gửi đến người được mời và người này sẽ xác nhận có tham gia vào tổ chức hay không.
 
