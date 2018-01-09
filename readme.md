@@ -264,3 +264,37 @@ Với 3 mức: Read Access, Write Access, Admin Access Github cho phép chúng t
 
 Sau đó hệ thống sẽ yêu cầu bạn nhập password để xác thực, nếu thành công, một email xác nhận sẽ được gửi đến người được mời và người này sẽ xác nhận có tham gia vào tổ chức hay không.
 
+## 8 Giới thiệu về cách sử dụng GitLab 
+
+### Tạo Repository trong GitLab
+- Tạo Project 
+<img src="https://i.imgur.com/6CAJTit.png" />
+- Ghi tên project và ấn nút khởi tạo
+<img src="https://i.imgur.com/ylCiu60.png" />
+- Tạo thành công 
+<img src="https://i.imgur.com/Pkt8gz1.png" />
+
+### Cách add những thành viên trong gitlap
+
+<img src="https://i.imgur.com/RQUTnId.png" />
+
+### Cách sử dụng Merge request
+- B1: Trước khi bắt đầu, bạn nên có sẵn 1 nhánh và có những lần commit trên nhánh đó đên Gitlab
+- B2: Đi tới project mà bạn muốn kết hợp các thay đổi của mình và nhấp vào tab Merge requests
+- B3: Click on New merge request
+- B4: Từ đó, bạn có tùy chọn để chọn chi nhánh nguồn và nhánh mục tiêu mà bạn muốn so sánh. 
+	
+<img src="https://docs.gitlab.com/ee/gitlab-basics/img/merge_request_select_branch.png" />
+
+- B5: Khi sẵn sàng, chọn **Compare branches** and **continue** button.
+- B6: Tối thiểu, thêm tiêu đề và mô tả cho yêu cầu hợp nhất của bạn. Theo tùy chọn, chọn người dùng
+ để xem lại yêu cầu hợp nhất và để chấp nhận hoặc đóng nó. Bạn cũng có thể chọn mốc thời gian và nhãn.
+ 
+<img src="https://docs.gitlab.com/ee/gitlab-basics/img/merge_request_page.png" />
+
+- B7: Click on the Submit merge request button
+
+### Phân Quyền 
+- Nhóm có nhiều hơn 1 người thì thiết làm phần quyền
+
+<img src="https://i.imgur.com/bW5WGmc.png" />
