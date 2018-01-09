@@ -269,11 +269,11 @@ Sau đó hệ thống sẽ yêu cầu bạn nhập password để xác thực, n
 ### Tạo Repository trong GitLab
 - Tạo Project 
 
-<img src="https://i.imgur.com/6CAJTit.png" />
+<img src="https://i.imgur.com/fgmedfN.png" />
 
 - Ghi tên project và ấn nút khởi tạo
 
-<img src="https://i.imgur.com/ylCiu60.png" />
+<img src="https://i.imgur.com/XjlIJCZ.png" />
 
 - Tạo thành công 
 
